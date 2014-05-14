@@ -12,3 +12,5 @@ AddOutputFilterByType DEFLATE application/javascript
 AddOutputFilterByType DEFLATE application/x-javascript
 
 # Or, compress certain file types by extension:
+
+SetOutputFilter DEFLATE
