@@ -1,0 +1,34 @@
+<?php
+/*
+ *Read more : http://www.bzzzz.biz/blog/joomla/using-caching-in-joomla-extensions.bzzzz
+ */
+
+// MATOD 1
+$cache = & JFactory::getCache();
+$instance= new SomeClass;
+$mySomething=$cache->call( array( $instance, 'testMethod' ), 'parameter1','parameter2','parameter3');
+
+
+ 
+// MATOD 2
+jimport('joomla.cache.cache');
+$conf =& JFactory::getConfig();
+
+$options = array(
+              'defaultgroup' => 'com_somecomponent',
+              'cachebase' => $conf->getValue('config.cache_path'),
+              'lifetime' => $conf->getValue('config.cachetime') * 60, // minutes to seconds
+              'language' => $conf->getValue('config.language'),
+              'storage' => 'file' );
+
+$cache = new JCache($options);
+$cache->setCaching($conf->getValue('config.caching'));
+  
+  
+  
+// MATOD 3  
+$cache = & JFactory::getCache();
+$result = $cache->call( array( 'SomeClass', 'testMethod' ) );
+
+$instance= new SomeClass;
+$mySomething=$cache->call( array( $instance, 'testMethod' ), 'parameter1','parameter2','parameter3');
