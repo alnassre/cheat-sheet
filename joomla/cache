@@ -12,23 +12,8 @@ $mySomething=$cache->call( array( $instance, 'testMethod' ), 'parameter1','param
  
 // MATOD 2
 jimport('joomla.cache.cache');
-$conf =& JFactory::getConfig();
+$cache = & JFactory::getCache('mod_skyinastgram','callback');
+$cache->setCaching($conf->get('config.caching'));
 
-$options = array(
-              'defaultgroup' => 'com_somecomponent',
-              'cachebase' => $conf->getValue('config.cache_path'),
-              'lifetime' => $conf->getValue('config.cachetime') * 60, // minutes to seconds
-              'language' => $conf->getValue('config.language'),
-              'storage' => 'file' );
-
-$cache = new JCache($options);
-$cache->setCaching($conf->getValue('config.caching'));
-  
-  
-  
-// MATOD 3  
-$cache = & JFactory::getCache();
-$result = $cache->call( array( 'SomeClass', 'testMethod' ) );
-
-$instance= new SomeClass;
-$mySomething=$cache->call( array( $instance, 'testMethod' ), 'parameter1','parameter2','parameter3');
+//$InstaPhotos = modSkyinastgram::getInstaPhotos($user_id,$access_token, $AdminPhotoCount);
+$InstaPhotos = $cache->call( array( 'modSkyinastgram' , 'getInstaPhotos' ),$user_id,$access_token, $AdminPhotoCount);
