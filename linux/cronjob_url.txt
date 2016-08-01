@@ -1,0 +1,1 @@
+curl -sS 'http://www.example.com/index.php?option=my_name&task=records.update&random=2'
