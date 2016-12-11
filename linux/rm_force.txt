@@ -1,0 +1,2 @@
+# remove all file & directories on current location
+rm -r .
