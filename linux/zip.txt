@@ -1,0 +1,6 @@
+
+#zip all files & directorise exclude zip files
+zip archive.zip * -x "*.zip"
+
+# -sf mean show before zip 
+zip archive.zip * -x "*.zip" -sf
