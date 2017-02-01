@@ -1,0 +1,2 @@
+# add usernamr of apache2 (www-data) to all directory . (dot mean current)
+chown -R www-data:www-data .
