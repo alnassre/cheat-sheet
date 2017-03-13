@@ -4,3 +4,8 @@ ps aux | egrep '(apache|httpd)'
 
 # add usernamr of apache2 (www-data) to all directory . (dot mean current)
 chown -R www-data:www-data .
+
+
+#if needed , permiitions
+find . -type f -exec chmod 644 {} \;
+find . -type d -exec chmod 755 {} \;
