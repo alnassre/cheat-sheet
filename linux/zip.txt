@@ -4,3 +4,7 @@ zip archive.zip * -x "*.zip"
 
 # -sf mean show before zip 
 zip archive.zip * -x "*.zip" -sf
+
+
+#zip dir 
+zip -r 20170399.zip dirname
