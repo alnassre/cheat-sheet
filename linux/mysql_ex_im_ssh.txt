@@ -1,0 +1,12 @@
+#Export
+mysqldump -p -h hostname -u username database > dbname.sql
+#or
+mysqldump -p -u username database > dbname.sql
+
+
+#import
+mysql -u username -p
+
+mysql> use test_database
+mysql> source /..../admin_20111104.sql
+
