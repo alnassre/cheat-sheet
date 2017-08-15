@@ -1,0 +1,4 @@
+https://askubuntu.com/questions/679244/lost-my-files-after-mounting-a-partition-as-home-folder
+
+mkdir mnt
+sudo mount --bind / mnt
