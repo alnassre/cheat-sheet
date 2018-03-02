@@ -1,0 +1,11 @@
+# stop using apache2 to use port 443
+sudo service apache2 stop
+
+#cd to the scripts
+cd /root/letsencrypt
+
+#use the bot it will renew all SSLs auto
+./certbot-auto renew
+
+# back live
+sudo service apache2 start
