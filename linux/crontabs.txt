@@ -1,0 +1,10 @@
+#list crontabs 
+sudo crontab -u www-data -l
+
+#or 
+cd /var/spool/cron/crontabs
+cat www-data
+
+
+#check log (where CRON to filter the lines)
+grep CRON /var/log/syslog
