@@ -1,9 +1,20 @@
+#add command
+crontab -e -u www-data
+crontab -e -u {user}
+
+#or
+nano /var/spool/cron/crontabs/www-data
+nano /var/spool/cron/crontabs/{user}
+
+
 #list crontabs 
 sudo crontab -u www-data -l
+sudo crontab -u {user} -l
 
 #or 
 cd /var/spool/cron/crontabs
 cat www-data
+cat {user}
 
 
 #check log (where CRON to filter the lines)
