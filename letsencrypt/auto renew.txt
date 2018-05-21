@@ -1,0 +1,30 @@
+#1#
+#Locate Certbot-Auto Package
+# search for certbot-auto on /root/letsencrypt/ or /etc/letsencrypt/
+
+#2#
+# if not found download it
+wget https://dl.eff.org/certbot-auto && chmod a+x certbot-auto
+
+#3#
+#Move Certbot-Auto Package
+sudo mv certbot-auto /etc/letsencrypt/
+
+#4#
+#Edit Crontab File
+sudo crontab -e
+
+#add the line
+45 2 * * 5 cd /etc/letsencrypt/ && /etc/init.d/apache2 stop && ./certbot-auto renew --force-renew && /etc/init.d/apache2 restart
+
+#5#
+#Done
+
+
+#6# 
+#TEST
+cd /etc/letsencrypt/ && /etc/init.d/apache2 stop && ./certbot-auto renew --force-renew && /etc/init.d/apache2 restart
+
+
+#Reference 
+#https://www.onepagezen.com/letsencrypt-auto-renew-certbot-apache/
