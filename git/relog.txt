@@ -1,0 +1,8 @@
+#see logs
+git reflog
+
+#chose the time you want to return to EX: HEAD@{5} in the ref log:
+git reset --hard HEAD@{5}
+
+
+#done
