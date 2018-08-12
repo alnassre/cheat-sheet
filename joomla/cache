@@ -17,3 +17,11 @@ $cache->setCaching($conf->get('config.caching'));
 
 //$InstaPhotos = modSkyinastgram::getInstaPhotos($user_id,$access_token, $AdminPhotoCount);
 $InstaPhotos = $cache->call( array( 'modSkyinastgram' , 'getInstaPhotos' ),$user_id,$access_token, $AdminPhotoCount);
+
+
+//MATHOD 3
+$cache =  JFactory::getCache('mod_skyinastgram','callback');
+$cache->setLifeTime('604800');
+$cache->setCaching(1);
+
+$result = $cache->call( array( 'modSkyinastgram' , 'getInstaPhotos' ),$user_id,$access_token, $AdminPhotoCount);
