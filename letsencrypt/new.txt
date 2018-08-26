@@ -1,0 +1,6 @@
+#single domain
+certbot --apache -d  jc-creator.com
+
+
+#multi domain with one cert
+sudo certbot --apache -d jc-creator.com -d www.jc-creator.com
