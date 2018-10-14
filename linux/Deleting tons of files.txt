@@ -1,0 +1,4 @@
+
+#Deleting tons of files in Linux (Argument list too long)
+
+find . -type f -exec rm -v {} \;
