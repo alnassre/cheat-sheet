@@ -1,0 +1,14 @@
+#install cordova if not
+npm install cordova -g
+
+#init app using phonegap tempalate
+cordova create appvuef7tabs com.example.myapp appvuef7tabs --template=phonegap-template-vue-f7-tabs
+
+#set on folder 
+cd appvuef7tabs
+
+#pull libs 
+npm install
+
+#run on browser & watch to live while develope
+npm run dev
