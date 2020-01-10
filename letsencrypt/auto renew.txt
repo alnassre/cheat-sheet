@@ -16,6 +16,9 @@ sudo crontab -e
 
 #add the line
 45 2 * * 5 cd /etc/letsencrypt/ && /etc/init.d/apache2 stop && ./certbot-auto renew --force-renew && /etc/init.d/apache2 restart
+#or
+45 2 * * 5 cd /etc/letsencrypt/ &&  ./certbot-auto renew --force-renew && systemctl restart apache2
+
 
 #5#
 #Done
@@ -28,3 +31,4 @@ cd /etc/letsencrypt/ && /etc/init.d/apache2 stop && ./certbot-auto renew --force
 
 #Reference 
 #https://www.onepagezen.com/letsencrypt-auto-renew-certbot-apache/
+#https://www.youtube.com/watch?v=O97YVt8Ceu0
