@@ -2,7 +2,7 @@
 ps aux | egrep '(apache|httpd)'
 
 
-sudo mkdir tmp logs cache administrator/cache images/client
+sudo mkdir tmp cache administrator/cache images/client administrator/logs
 
 # add usernamr of apache2 (www-data) to all directory . (dot mean current)
 sudo chown -R www-data:www-data .
