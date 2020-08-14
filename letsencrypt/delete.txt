@@ -1,2 +1,3 @@
 #choose the certificate to delete from the list
 certbot delete
+# than chose form list
