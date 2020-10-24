@@ -1,4 +1,4 @@
-tricks
+#cheat sheet
 ======
 
-Tricks &amp; tips on PHP, Javascript, JQuery and CSS.
+Feel free to edit this README.md becouse I have nothing to say :P
