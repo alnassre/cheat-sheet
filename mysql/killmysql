@@ -1,1 +1,15 @@
+# kill all
 sudo killall mysqld
+
+
+# stop vrew
+brew services stop mysql@5.6
+
+
+#Find:
+sudo lsof -i :3306
+
+
+#Kill:
+kill -15 <PID>
+kill -9  <PID>
