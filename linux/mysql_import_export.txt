@@ -6,7 +6,12 @@ mysqldump -p -u username database > dbname.sql
 
 #import
 mysql -u username -p
-
 mysql> use test_database
 mysql> source /..../admin_20111104.sql
+
+
+#import on docker 
+docker exec -i mysql_container_mysql_1 mysql -uroot -ppassword mysql < /path/db.sql
+
+
 
