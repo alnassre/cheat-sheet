@@ -3,6 +3,12 @@ git add .
 git commit -m ".gitignore fix"
 
 
+# or 
+
+git rm --cached <file>
+git rm -r --cached <folder>
+
+
 
 #Step 1: Commit all your changes
 #Before proceeding, make sure all your changes are committed, including your .gitignore file.
