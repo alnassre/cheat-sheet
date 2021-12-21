@@ -1,0 +1,36 @@
+
+
+## request the token for the TXT record 
+
+certbot certonly --server https://acme-v02.api.letsencrypt.org/directory --manual --preferred-challenges dns -d 'safiapp.site,*.safiapp.site'
+
+
+# ------------------------------------------------------------------
+
+## add DNS
+
+# In your DNS provider, you’ll create a new DNS TXT record with:
+# Record Name: _acme-challenge (you may or may not need the .example.com suffix depending on your DNS provider.
+# Record Value: VWHqMqojnAZb8oLV2ZMaqaeUUyiTAX4-3KeokqJ69hE (replace this with the value provided by Certbot)
+
+
+# ------------------------------------------------------------------
+
+## kill request, then request it from virtualmin 
+
+# If it is not running, check whether there are .certbot.lock files in your system
+find / -type f -name ".certbot.lock"
+
+# If there are, you can remove them:
+find / -type f -name ".certbot.lock" -exec rm {} \;
+
+
+# ------------------------------------------------------------------
+
+## usefull links
+
+https://nodebb.org/generating-your-first-wildcard-ssl-certificate-via-certbot-lets-encrypt/
+
+https://community.letsencrypt.org/t/solved-another-instance-of-certbot-is-already-running/44690
+
+https://bobcares.com/blog/letsencrypt-wildcard-howto/
