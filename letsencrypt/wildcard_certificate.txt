@@ -34,3 +34,10 @@ https://nodebb.org/generating-your-first-wildcard-ssl-certificate-via-certbot-le
 https://community.letsencrypt.org/t/solved-another-instance-of-certbot-is-already-running/44690
 
 https://bobcares.com/blog/letsencrypt-wildcard-howto/
+
+
+## to fix this all
+# host DNS locally first
+https://medium.com/@leandro.almeida/dns-server-with-webmin-e189413462da 
+
+then all will be automaticly
