@@ -1,0 +1,55 @@
+## request the token for the TXT record 
+
+certbot certonly --server https://acme-v02.api.letsencrypt.org/directory --manual --preferred-challenges dns -d 'safiapp.site,*.safiapp.site'
+
+
+# ------------------------------------------------------------------
+
+## add DNS
+
+# In your DNS provider, you’ll create a new DNS TXT record with:
+# Record Name: _acme-challenge (you may or may not need the .example.com suffix depending on your DNS provider.
+# Record Value: VWHqMqojnAZb8oLV2ZMaqaeUUyiTAX4-3KeokqJ69hE (replace this with the value provided by Certbot)
+
+press to continue
+
+# cert files will be generated 
+
+   /etc/letsencrypt/live/safiapp.site-0001/fullchain.pem
+   /etc/letsencrypt/live/safiapp.site-0001/privkey.pem
+   /etc/letsencrypt/live/safiapp.site-0001/chain.pem
+
+# ------------------------------------------------------------------
+
+## add cert into Apache configuration
+
+virtualmin -> your domain -> services -> configur ssl website ->  SSL Options
+
+# add those 
+
+Certificate/private key file	===> /etc/letsencrypt/live/safiapp.site-0001/fullchain.pem
+Private key file ===> /etc/letsencrypt/live/safiapp.site-0001/privkey.pem
+Certificate authorities file ===> /etc/letsencrypt/live/safiapp.site-0001/chain.pem
+
+## or
+
+
+virtualmin -> your domain -> services -> configur ssl website ->   Edit Directives
+
+# edit like this: 
+
+SSLEngine on
+SSLCertificateFile /etc/letsencrypt/live/safiapp.site-0001/fullchain.pem
+SSLCertificateKeyFile /etc/letsencrypt/live/safiapp.site-0001/privkey.pem
+....
+....
+SSLCACertificateFile /etc/letsencrypt/live/safiapp.site-0001/chain.pem
+
+
+# ------------------------------------------------------------------
+
+## Apply changes on apache
+
+webmin -> serach for (Apache) -> click (Apply changes)
+
+##done
