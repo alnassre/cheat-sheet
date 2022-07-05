@@ -53,3 +53,7 @@ SSLCACertificateFile /etc/letsencrypt/live/safiapp.site-0001/chain.pem
 webmin -> serach for (Apache) -> click (Apply changes)
 
 ##done
+
+
+
+#auto : https://www.youtube.com/watch?v=7jEzioFsyNo&ab_channel=AntonPutra
