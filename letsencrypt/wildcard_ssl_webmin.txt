@@ -11,6 +11,9 @@ certbot certonly --server https://acme-v02.api.letsencrypt.org/directory --manua
 # Record Name: _acme-challenge (you may or may not need the .example.com suffix depending on your DNS provider.
 # Record Value: VWHqMqojnAZb8oLV2ZMaqaeUUyiTAX4-3KeokqJ69hE (replace this with the value provided by Certbot)
 
+
+# check TXT Recoud using (https://mxtoolbox.com/txtlookup.aspx)
+# Than
 press to continue
 
 # cert files will be generated 
