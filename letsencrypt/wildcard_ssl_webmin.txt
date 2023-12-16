@@ -1,6 +1,6 @@
 ## request the token for the TXT record 
 
-certbot certonly --server https://acme-v02.api.letsencrypt.org/directory --manual --preferred-challenges dns -d 'safiapp.site,*.safiapp.site'
+certbot certonly --server https://acme-v02.api.letsencrypt.org/directory --manual --preferred-challenges dns -d 'safi-site.com,*.safi-site.com'
 
 
 # ------------------------------------------------------------------
