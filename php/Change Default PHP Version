@@ -1,0 +1,7 @@
+You can use an `update-alternatives` command to set the default PHP version. Use this tutorial to read more details about switching the PHP version for CLI and Apache.
+
+sudo update-alternatives --config php
+
+
+
+read :https://tecadmin.net/how-to-install-php-on-ubuntu-22-04/
